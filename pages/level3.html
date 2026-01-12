@@ -1,0 +1,61 @@
+﻿<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Курсовой проект</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/logo.css">
+	<link rel="stylesheet" href="../css/level3.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-content"> 
+                <div class="sun">
+                    <div class="label">El-energy</div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Вернуться к заданиям</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="game-header">
+	<div>Игрок: <span id="playerName"></span></div>
+	<div>Очки: <span id="score">0</span></div>
+	<div>Уровень: <span id="level">3</span></div>
+	<div>Время: <span id="time">60</span> сек</div>
+    </div>
+
+    <main id="mainContent">
+
+        <div class="level-container">
+            <h2 id="taskText" style="text-align: center; margin-top: 10px;">Загрузка...</h2>
+            <div id="gameArea" class="level3-area"></div>
+        </div>
+
+	<div class="debug-nav">
+        	<button onclick="goToMain()">Главная</button>
+        	<button onclick="debugNavigate('level1.html', 1)">Ур. 1</button>
+        	<button onclick="debugNavigate('level2.html', 2)">Ур. 2</button>
+        	<button onclick="debugNavigate('level3.html', 3)">Ур. 3</button>
+    	</div>
+
+    </main>
+
+    <footer>
+	<div class="footer-content">
+	    &copy; 2025. Все права защищены.
+	</div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/game.js"></script>
+    <script src="../js/level3.js"></script>
+
+</body>
