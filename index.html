@@ -1,0 +1,55 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсовой проект</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-content"> 
+                <div class="sun">
+                    <div class="label">El-energy</div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Вернуться к заданиям</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <div class="start-screen">
+            <h1>Игра «Признаки предметов»</h1>
+            <p>Найдите предметы по общему признаку</p>
+
+            <input type="text" id="playerName" placeholder="Введите ваше имя" maxlength="15" class="nice-input">
+
+            <button id="startBtn" class="main-btn">Начать игру</button>
+            <button id="recordsBtn" class="secondary-btn" onclick="window.location.href='pages/rating.html'">🏆 Рекорды</button>
+
+            <p id="error" class="error"></p>
+
+            <div class="debug-nav">
+                <p style="font-size: 12px; color: #888;">Отладка (Зайти как Гость):</p>
+                <button onclick="debugNavigate('pages/level1.html', 1)">Ур. 1</button>
+                <button onclick="debugNavigate('pages/level2.html', 2)">Ур. 2</button>
+                <button onclick="debugNavigate('pages/level3.html', 3)">Ур. 3</button>
+            </div>
+        </div>
+    </main>    
+
+    <footer>
+        <div class="footer-content">
+            &copy; 2025. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+</body>
