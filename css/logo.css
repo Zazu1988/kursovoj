@@ -1,0 +1,58 @@
+﻿:root{
+  --size: 60px;           /* Размер 60px для соответствия высоте шапки (70px) */
+  --sun-color: #FFD430;   /* Ярко-желтый для солнца */
+  --text-blue:  #6ED0FF;  /* Голубой для текста */
+}
+
+/* -------------- Контейнер содержимого логотипа ---------------------------- */
+.logo-content{
+  width: var(--size);             /* Ширина контейнера (60px) */
+  height: var(--size);            /* Высота контейнера (60px) */
+  display: flex;                  /* Использование Flexbox */
+  align-items: center;            /* Центрирование по вертикали */
+  justify-content: center;        /* Центрирование по горизонтали */
+  background: transparent;        /* Прозрачный фон */
+}
+
+/* ------------------- Солнце ------------------------------------------------ */
+.sun{
+  width: 100%;                     /* Занимает всю ширину .logo-content */
+  height: 100%;                    /* Занимает всю высоту .logo-content */
+  border-radius: 50%;             /* Идеальный круг */
+  background: var(--sun-color);   /* Желтая заливка */
+  position: relative;             
+  overflow: hidden;               
+  display:flex;                   
+  align-items:center;             
+  justify-content:center;           
+  box-shadow: 0 0 0 0.5px #000; /* ТОНКАЯ ЧЕРНАЯ ОБВОДКА СОЛНЦА (0.5px) */  
+}
+
+/* ----------------------------- Надпись ------------------------------- */
+.label{
+  position: absolute;             
+  left: 50%;                      
+  top: 50%;                       
+  transform: translate(-50%, -50%); /* центрирование текста */
+  
+  /* Стили текста */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 700;
+  color: var(--text-blue);        
+  font-size: 11px; /* Размер шрифта, подходящий для 60px круга */
+  
+  /* Параметры отображения */
+  white-space: nowrap;            
+  max-width: 90%; 
+  text-align:center;              
+  pointer-events:none;            
+  line-height:1;                  
+  -webkit-font-smoothing:antialiased;
+  
+  /* ТОНКАЯ ЧЕРНАЯ ОБВОДКА ТЕКСТА (0.5px) */
+  text-shadow: 
+    -0.5px -0.5px 0 #000,         
+    0.5px -0.5px 0 #000,          
+    -0.5px 0.5px 0 #000,          
+    0.5px 0.5px 0 #000;           
+}

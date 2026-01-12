@@ -1,0 +1,19 @@
+﻿/* Стили специфичные для уровня 1 */
+
+#gameArea {
+    /* Уровень 1 использует общие стили #gameArea из style.css */
+}
+
+#taskText {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.level1-hint {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}

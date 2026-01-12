@@ -1,0 +1,124 @@
+﻿/* ================================
+   LEVEL 2 — СОРТИРОВКА В КОРЗИНЫ
+   ================================ */
+
+/* Подсказка */
+.level2-hint {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}
+
+/* Контейнер корзин */
+.bins-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+/* Корзина */
+.bin {
+    width: 220px;
+    min-height: 140px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Название корзины */
+.bin-label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+/* Контейнер для карточек внутри корзины */
+.bin-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+/* ================================
+   КАРТОЧКИ
+   ================================ */
+
+/* Карточка внизу (исходная) */
+.item {
+    width: 130px;
+    height: 160px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    cursor: grab;
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Когда тащим */
+.item.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+/* ================================
+   КАРТОЧКИ В КОРЗИНЕ
+   ================================ */
+
+.bin-items .item {
+    width: 60px;
+    height: 80px;
+    padding: 4px;
+    cursor: default;
+}
+
+.bin-items img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ================================
+   АНИМАЦИЯ ОШИБКИ
+   ================================ */
+/* Ошибка: тряска + красная подсветка */
+.bin.error {
+    border-color: #e53935;
+    background-color: #ffebee;
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-5px); }
+    50%  { transform: translateX(5px); }
+    75%  { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+/* Ошибка: тряска + красная подсветка */
+.bin.error {
+    border-color: #e53935;
+    background-color: #ffebee;
+    animation: shake 0.4s;
+}
