@@ -106,6 +106,12 @@ function spawn() {
 }
 
 function explode(target) {
+
+    const sound = document.getElementById('explosionSound');
+    if (sound) {
+        sound.currentTime = 0;
+        sound.play();
+    }
     const rect = target.getBoundingClientRect();
     const areaRect = gameArea.getBoundingClientRect();
 
@@ -148,6 +154,7 @@ function explode(target) {
         setTimeout(() => frag.remove(), 600);
     }
 }
+
 
 
 const spawnInterval = setInterval(spawn, 1000);
